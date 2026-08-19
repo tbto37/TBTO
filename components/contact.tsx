@@ -63,15 +63,28 @@ export function Contact() {
     setErrors({})
     setSubmitting(true)
 
-    // TODO: 실제 문의 처리 연결 지점.
-    // 여기에서 이메일 발송 서비스 또는 API 라우트(예: fetch('/api/contact', ...))를 호출하세요.
-    // 예) await fetch('/api/contact', { method: 'POST', body: JSON.stringify(result.data) })
-    await new Promise((r) => setTimeout(r, 700))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(result.data),
+      })
 
-    setSubmitting(false)
-    form.reset()
-    setToast(true)
-    window.setTimeout(() => setToast(false), 4500)
+      const json = await response.json()
+
+      if (!response.ok || !json.success) {
+        throw new Error(json.error || '이메일 발송에 실패했습니다.')
+      }
+
+      form.reset()
+      setToast(true)
+      window.setTimeout(() => setToast(false), 5000)
+    } catch (err: any) {
+      console.error('Contact submission error:', err)
+      alert(err.message || '문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const inputBase =

@@ -152,8 +152,10 @@ pnpm start
 ### 2. 다국어 텍스트 및 콘텐츠 수정
 [`lib/i18n/content.ts`](lib/i18n/content.ts) 파일의 `ko`, `en`, `ja` 객체를 통해 문구를 수정하거나 신규 항목을 추가할 수 있습니다.
 
-### 3. 문의하기 폼 백엔드 연동
-[`components/contact.tsx`](components/contact.tsx)의 `onSubmit` 함수 내에 실제 API 엔드포인트(예: `/api/contact`, 이메일 발송 웹훅, DB 저장 등) 호출 로직을 연결할 수 있습니다.
+### 3. 문의하기 폼 이메일 발송 연동 (API & SMTP)
+* 문의 폼 제출 시 [`app/api/contact/route.ts`](app/api/contact/route.ts) API 엔드포인트를 통해 `tobetheone@tobetheone.kr`로 자동 발송됩니다.
+* 실제 메일 발송을 위한 SMTP 환경변수는 [`.env.example`](.env.example)을 참고하여 `.env.local` 또는 Vercel 환경변수에 등록하세요 (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`).
+* 메일함에서 바로 **[답장]**을 누르면 문의 고객의 이메일로 즉시 회신할 수 있도록 `replyTo`가 자동 지정됩니다.
 
 ---
 

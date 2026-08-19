@@ -110,7 +110,24 @@
   * `components/header.tsx`
   * `doc/work_log.md`
 
+#### 14. 문의하기 폼 이메일 발송 시스템 구축 (API & 이메일 템플릿 연동)
+* **내용**:
+  * `nodemailer` 및 Zod 기반의 서버 사이드 API 라우트([`app/api/contact/route.ts`](../app/api/contact/route.ts)) 신규 생성.
+  * 문의 폼 제출 시 고객 정보(회사명, 담당자, 이메일, 연락처, 문의유형, 일정, 내용 등)를 구색에 맞춘 반응형 HTML & Text 템플릿으로 변환하여 `tobetheone@tobetheone.kr`로 자동 발송되도록 구현.
+  * 메일 수신 시 바로 **[답장]** 버튼을 누르면 고객의 이메일로 즉시 회신되도록 `replyTo` 설정.
+  * [`components/contact.tsx`](../components/contact.tsx)의 `onSubmit` 함수를 실제 API 비동기 호출(`fetch('/api/contact')`)로 연동하고 성공/실패 피드백 처리.
+  * 환경변수 예시 파일([`.env.example`](../.env.example)) 생성 및 `.gitignore` 보안 설정.
+* **관련 파일**:
+  * `app/api/contact/route.ts`
+  * `components/contact.tsx`
+  * `.env.example`
+  * `.gitignore`
+  * `package.json`
+  * `README.md`
+  * `doc/work_log.md`
+
 ---
+
 
 
 
