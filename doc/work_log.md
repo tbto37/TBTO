@@ -126,7 +126,29 @@
   * `README.md`
   * `doc/work_log.md`
 
+#### 15. Git Pull local 충돌 해결 및 최신 커밋 반영
+* **내용**:
+  * 로컬 개발 환경(`pnpm dev`, `pnpm install`)에서 자동 변경된 `pnpm-lock.yaml` 및 `next-env.d.ts`로 인해 발생한 `git pull` 병합 충돌 해결.
+  * 로컬 자동 변경 사항을 복구(`git restore .`)한 후 원격 저장소(`origin/main`)의 최신 커밋(`4f41f83`)을 성공적으로 동기화(Fast-forward).
+* **관련 파일**:
+#### 16. 프로젝트 경험 하단 기업 로고 무한 우측 슬라이드 마키(Marquee) 구축
+* **내용**:
+  * **요청 반영**: 프로젝트 경험 영역 하단에 주요 대기업 고객사/협력사 로고(현대, 삼성, LG, SK, CJ, 포스코, 롯데, 한화, 네이버, 카카오, 신한, KB 등 12개 주요 기업)를 우측 방향으로 무한 회전하는 애니메이션 마키 컴포넌트([`components/client-marquee.tsx`](../components/client-marquee.tsx)) 구축.
+  * **애니메이션 구현**: CSS `@keyframes marquee-right` (`translateX(-50%)` → `translateX(0%)`) 및 2배 복제 트랙 배열 구조를 적용하여 이음새(Gap)나 멈춤 없이 우측으로 60fps 무한 루프 구현.
+  * **UX & 비주얼 디테일**:
+    * 좌우 페이드 그라데이션 마스크(`bg-gradient-to-r/l`)를 적용하여 로고가 부드럽게 등장하고 퇴장.
+    * 마우스 오버 시 슬라이드가 일시 정지(`hover:[animation-play-state:paused]`)되고 고유 브랜딩 컬러 호버 반응형 뱃지 카드 적용.
+    * 한국어, 영어, 일본어 다국어(`lib/i18n/content.ts`) 지원.
+* **관련 파일**:
+  * `components/client-marquee.tsx`
+  * `components/projects.tsx`
+  * `app/globals.css`
+  * `lib/i18n/content.ts`
+  * `doc/work_log.md`
+
 ---
+
+
 
 
 

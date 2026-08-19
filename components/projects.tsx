@@ -8,6 +8,8 @@ import { SectionHeading } from './section-heading'
 import { Reveal } from './reveal'
 import { cn } from '@/lib/utils'
 
+import { ClientMarquee } from './client-marquee'
+
 export function Projects() {
   const { t } = useLocale()
   const reduce = useReducedMotion()
@@ -92,6 +94,10 @@ export function Projects() {
           })}
         </div>
       </div>
+
+      {/* Corporate Client & Partner Logos Infinite Rightward Marquee */}
+      <ClientMarquee />
     </section>
   )
 }
+

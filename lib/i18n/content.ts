@@ -70,6 +70,11 @@ export interface SiteContent {
     note: string
     scopeLabel: string
     items: { industry: string; title: string; points: string[] }[]
+    clientLogos: {
+      eyebrow: string
+      title: string
+      note: string
+    }
   }
   process: {
     eyebrow: string
@@ -397,6 +402,11 @@ const ko: SiteContent = {
         ],
       },
     ],
+    clientLogos: {
+      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
+      title: '주요 고객사 & 협력 인프라',
+      note: '대한민국을 대표하는 대기업 및 혁신 기업들과 함께 엔터프라이즈 시스템 구축 및 AI DX 프로젝트를 수행해오고 있습니다.',
+    },
   },
   process: {
     eyebrow: '수행 프로세스',
@@ -733,6 +743,11 @@ const en: SiteContent = {
         ],
       },
     ],
+    clientLogos: {
+      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
+      title: 'Major Clients & Enterprise Partners',
+      note: 'Trusted by leading global corporations and enterprise leaders for mission-critical IT systems and AI transformation.',
+    },
   },
   process: {
     eyebrow: 'Process',
@@ -960,6 +975,11 @@ const ja: SiteContent = {
         points: ['B2B卸・流通プラットフォーム企画', 'ERP・物流連携の構造', '多言語・グローバル設計', '拡張可能な SaaS アーキテクチャ'],
       },
     ],
+    clientLogos: {
+      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
+      title: '主要クライアント＆パートナー企業',
+      note: '国内外の大手企業および革新企業とともに、エンタープライ즈システム構築およびDXプロジェクトを推進しています。',
+    },
   },
   process: {
     eyebrow: 'プロセス',
