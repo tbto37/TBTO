@@ -1,16 +1,16 @@
-# 주식회사 투비더원 (TO BE THE ONE) — 공식 웹사이트
+# 주식회사 투비더원 (TOBETHEONE) — 공식 웹사이트
 
 > **Enterprise Software & AI Transformation Partner**  
-> 비즈니스를 이해하고, 작동하는 기술로 완성하는 B2B IT 파트너 **(주)투비더원**의 공식 웹사이트 프로젝트입니다.
+> 비즈니스를 이해하고, 작동하는 기술로 완성하는 B2B IT 파트너 **주식회사 투비더원(TOBETHEONE)**의 공식 웹사이트 프로젝트입니다.
 
 ---
 
 ## 📌 프로젝트 개요 (Overview)
 
-본 프로젝트는 **주식회사 투비더원(TO BE THE ONE Co., Ltd.)**의 기업 브랜딩 및 서비스 소개를 위한 반응형 공식 웹사이트입니다.  
+본 프로젝트는 **주식회사 투비더원(TOBETHEONE)**의 기업 브랜딩 및 서비스 소개를 위한 반응형 공식 웹사이트입니다.  
 엔터프라이즈 SI/SM, 웹·모바일 플랫폼 개발, 시스템 연계(API/EAI/Batch), AI 업무자동화 및 글로벌 서비스 확장 역량을 소개하며, 한국어·영어·일본어 3개국어 다국어 환경을 지원합니다.
 
-* **회사명**: 주식회사 투비더원 (TO BE THE ONE Co., Ltd.)
+* **회사명**: 주식회사 투비더원 (TOBETHEONE)
 * **대표자**: 조현원 (Cho Hyunwon)
 * **설립일**: 2023년 3월 1일
 * **공식 도메인**: [https://www.tobetheone.co.kr](https://www.tobetheone.co.kr)
@@ -159,4 +159,4 @@ pnpm start
 
 ## 📄 라이선스 (License)
 
-Copyright © 2023-현재 **주식회사 투비더원 (To Be The One Co., Ltd.)** All rights reserved.
+Copyright © 2023-현재 **주식회사 투비더원 (TOBETHEONE)** All rights reserved.

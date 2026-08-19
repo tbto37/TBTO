@@ -4,8 +4,8 @@
  */
 export const company = {
   name: '주식회사 투비더원',
-  nameEn: 'To Be The One Co., Ltd.',
-  shortName: 'TO BE THE ONE',
+  nameEn: 'TOBETHEONE Co., Ltd.',
+  shortName: 'TOBETHEONE',
   ceo: '조현원',
   ceoEn: 'Cho Hyunwon',
   founded: '2023-03-01',

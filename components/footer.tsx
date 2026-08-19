@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLocale } from '@/lib/i18n/context'
 import { company } from '@/lib/company'
 
@@ -24,12 +25,16 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.1fr_1.4fr]">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-navy text-[11px] font-bold text-navy-foreground">
-                T1
-              </span>
+            <div className="flex items-center gap-2.5">
+              <Image
+                src="/logo.png"
+                alt="TOBETHEONE 로고"
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-md object-contain"
+              />
               <span className="text-sm font-bold tracking-[0.16em] text-foreground">
-                TO BE THE ONE
+                TOBETHEONE
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">

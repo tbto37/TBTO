@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -48,26 +49,24 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="group flex items-center gap-2 rounded-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-          aria-label="To Be The One — 맨 위로"
+          className="group flex items-center gap-2.5 rounded-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          aria-label="TOBETHEONE — 맨 위로"
         >
-          <span
-            className={cn(
-              'flex h-7 w-7 items-center justify-center rounded-md text-[11px] font-bold transition-colors',
-              solid
-                ? 'bg-navy text-navy-foreground'
-                : 'bg-navy-foreground text-navy',
-            )}
-          >
-            T1
-          </span>
+          <Image
+            src="/logo.png"
+            alt="TOBETHEONE 로고"
+            width={32}
+            height={32}
+            priority
+            className="h-8 w-8 rounded-md object-contain"
+          />
           <span
             className={cn(
               'text-sm font-bold tracking-[0.16em] transition-colors',
               solid ? 'text-foreground' : 'text-navy-foreground',
             )}
           >
-            TO BE THE ONE
+            TOBETHEONE
           </span>
         </button>
 

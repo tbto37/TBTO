@@ -480,7 +480,7 @@ const ko: SiteContent = {
     tagline:
       '기업 업무시스템, 웹·모바일, 시스템 연계와 AI 업무자동화를 함께하는 B2B IT 파트너.',
     privacy: '개인정보처리방침',
-    rights: 'Copyright © To Be The One Co., Ltd. All rights reserved.',
+    rights: 'Copyright © TOBETHEONE Co., Ltd. All rights reserved.',
     labels: {
       ceo: '대표이사',
       founded: '설립일',
@@ -513,7 +513,7 @@ const en: SiteContent = {
   hero: {
     eyebrow: 'Enterprise Software & AI Transformation Partner',
     headline: ['We understand the business,', 'and build technology that works.'],
-    desc: 'To Be The One is a B2B IT partner that delivers enterprise systems, web & mobile platforms, system integration, and AI automation — from planning through operation.',
+    desc: 'TOBETHEONE is a B2B IT partner that delivers enterprise systems, web & mobile platforms, system integration, and AI automation — from planning through operation.',
     badges: [
       'Enterprise SI',
       'Web & Mobile',
@@ -636,7 +636,7 @@ const en: SiteContent = {
     title: 'The way we deliver projects is different.',
     note: 'This is not a comparison with competitors — it describes the scope of responsibility we take on.',
     fromLabel: 'Common approach',
-    toLabel: 'The To Be The One way',
+    toLabel: 'The TOBETHEONE way',
     rows: [
       { from: 'Just fulfilling dev requests', to: 'Analyzing business goals and work flows' },
       { from: 'Implementing isolated features', to: 'Considering the whole system and its integrations' },
@@ -796,7 +796,7 @@ const en: SiteContent = {
     tagline:
       'A B2B IT partner for enterprise systems, web & mobile, system integration, and AI automation.',
     privacy: 'Privacy Policy',
-    rights: 'Copyright © To Be The One Co., Ltd. All rights reserved.',
+    rights: 'Copyright © TOBETHEONE. All rights reserved.',
     labels: {
       ceo: 'CEO',
       founded: 'Founded',
@@ -829,7 +829,7 @@ const ja: SiteContent = {
   hero: {
     eyebrow: 'Enterprise Software & AI Transformation Partner',
     headline: ['ビジネスを理解し、', '動く技術で実現します。'],
-    desc: 'To Be The One は、企業業務システム、Web・モバイルプラットフォーム、システム連携、AI業務自動化を、企画から運用まで伴走する B2B IT パートナーです。',
+    desc: 'TOBETHEONE は、企業業務システム、Web・モバイルプラットフォーム、システム連携、AI業務自動化を、企画から運用まで伴走する B2B IT パートナーです。',
     badges: [
       'Enterprise SI',
       'Web & Mobile',
@@ -908,7 +908,7 @@ const ja: SiteContent = {
     title: '私たちのプロジェクトの進め方は違います。',
     note: '競合との比較ではなく、私たちが責任を持つプロジェクトの範囲を説明するものです。',
     fromLabel: '一般的なアプローチ',
-    toLabel: 'To Be The One の方法',
+    toLabel: 'TOBETHEONE の方法',
     rows: [
       { from: '開発依頼をこなすだけ', to: 'ビジネス目的と業務フローの分析' },
       { from: '個別機能の実装', to: 'システム全体と連携を考慮' },
@@ -1023,7 +1023,7 @@ const ja: SiteContent = {
     tagline:
       '企業業務システム、Web・モバイル、システム連携、AI業務自動化に伴走する B2B IT パートナー。',
     privacy: 'プライバシーポリシー',
-    rights: 'Copyright © To Be The One Co., Ltd. All rights reserved.',
+    rights: 'Copyright © TOBETHEONE. All rights reserved.',
     labels: {
       ceo: '代表取締役',
       founded: '設立日',

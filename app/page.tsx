@@ -16,7 +16,7 @@ const organizationJsonLd = {
   },
   areaServed: ['KR', 'JP'],
   description:
-    'To Be The One is a B2B IT partner delivering enterprise systems, web & mobile platforms, API/EAI/Batch system integration, and AI work automation.',
+    'TOBETHEONE is a B2B IT partner delivering enterprise systems, web & mobile platforms, API/EAI/Batch system integration, and AI work automation.',
   knowsAbout: [
     'Enterprise SI',
     'Web & Mobile Development',

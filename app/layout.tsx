@@ -10,19 +10,23 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const title = '투비더원 | Enterprise Software & AI Transformation Partner'
+const title = '주식회사 투비더원 | Enterprise Software & AI Transformation Partner'
 const description =
-  '투비더원은 기업 업무시스템, 웹·모바일 플랫폼, API·EAI·Batch 시스템 연계와 AI 업무자동화를 구축하는 B2B IT 파트너입니다.'
+  '주식회사 투비더원(TOBETHEONE)은 기업 업무시스템, 웹·모바일 플랫폼, API·EAI·Batch 시스템 연계와 AI 업무자동화를 구축하는 B2B IT 파트너입니다.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.domain),
   title,
   description,
-  generator: 'v0.app',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   applicationName: company.nameEn,
   keywords: [
+    '주식회사 투비더원',
     '투비더원',
-    'To Be The One',
+    'TOBETHEONE',
     'Enterprise SI',
     'SI SM',
     '웹 모바일 개발',
