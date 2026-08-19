@@ -144,9 +144,42 @@
   * `components/projects.tsx`
   * `app/globals.css`
   * `lib/i18n/content.ts`
+#### 17. 실 프로젝트 수행 기업 7개사 반영 및 완전한 다국어(i18n) 연동
+* **내용**:
+  * **수행 기업 업데이트**: 사용자가 요청한 실 프로젝트 수행 기업 7개사(**현대자동차, 현대오토에버, 신세계면세점, 롯데이노베이트, 삼성엔지니어링, 서울아산병원, 성심당**)의 정밀 SVG 로고 및 시그니처 브랜딩 뱃지 카드 구축.
+  * **완전한 다국어(KO, EN, JP) 연동**:
+    * [`lib/i18n/content.ts`](../lib/i18n/content.ts) 내 `clientLogos.items`에 각 언어별 기업명 및 수행 카테고리(모빌리티, IT 플랫폼, 면세, 리테일, 플랜트 엔지니어링, 의료, F&B) 반영.
+    * 헤더의 언어 전환(한국어, English, 日本語) 클릭 시 프로젝트 마키 슬라이더 내부의 모든 기업명과 설명 카테고리가 실시간 다국어로 즉시 변환되도록 구현.
+#### 18. public/logos 파일 포맷 PNG 일괄 변환 통일 및 마키 컴포넌트 연동
+* **내용**:
+  * **이미지 포맷 통일**: `public/logos/` 폴더 내에 혼재되어 있던 다양한 포맷(`.svg`, `.webp`, `.png`)의 로고 이미지 7개를 Python 스크립트(`resvg-py` 및 `Pillow` 사용)를 통해 투명 배경의 **단일 `.png` 포맷**으로 일괄 변환 통일.
+    * `hyundai.png`
+    * `hyundai-autoever.png`
+    * `shinsegae-dutyfree.png`
+    * `lotte-innovate.png`
+    * `samsung-engineering.png`
+    * `asan-medical-center.png`
+    * `sungsimdang.png`
+  * **컴포넌트 연동**: [`components/client-marquee.tsx`](../components/client-marquee.tsx)에서 변환 통일된 `/logos/*.png` 이미지를 Next.js `Image` 컴포넌트로 렌더링하도록 전환하고, `pnpm build` 프로덕션 검증 완료.
+#### 19. 마키 컴포넌트 타이포그래피 및 폰트(Pretendard/Inter) 일치화
+* **내용**:
+  * **폰트 일치화**: 마키 슬라이드 내부의 카테고리 텍스트에 적용되어 있던 이질적인 고정폭 폰트(`font-mono`)를 제거하고, 사이트 전체 표준 폰트 시스템인 Pretendard/Inter(`font-sans`)로 전면 통합 통일.
+  * **헤딩 컴포넌트 통일**: 마키 헤더를 공통 컴포넌트인 [`SectionHeading`](../components/section-heading.tsx)으로 전환하여 서브헤딩(Eyebrow) 간격, 폰트 자간(`tracking-[0.18em]`), 폰트 굵기, 제목 가독성을 전체 페이지 스타일과 100% 일치시킴.
+  * `pnpm build` 검증 완료.
+#### 20. package.json pnpm overrides 위치 최신화 및 pnpm-lock.yaml 자동 변경 방지
+* **내용**:
+  * **원인 분석**: [`package.json`](../package.json)의 `"pnpm": { "overrides": { "hono": "4.12.25" } }` 구형 설정이 최신 pnpm(v9/v10/v11)에서 더 이상 읽히지 않아 `[WARN] The "pnpm" field in package.json is no longer read...` 경고와 함께 `pnpm-lock.yaml`의 `overrides:` 항목이 빌드/실행 시마다 자동으로 삭제/추가되던 현상 확인.
+  * **해결 조치**: `package.json` 최상단에 `"overrides": { "hono": "4.12.25" }`로 최신 표준 위치로 이전하여 경고 문구를 완전히 제거하고 `pnpm-lock.yaml`이 의도치 않게 자동 변경되는 현상 방지.
+* **관련 파일**:
+  * `package.json`
+  * `pnpm-lock.yaml`
   * `doc/work_log.md`
 
 ---
+
+
+
+
 
 
 

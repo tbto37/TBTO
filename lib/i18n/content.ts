@@ -74,6 +74,7 @@ export interface SiteContent {
       eyebrow: string
       title: string
       note: string
+      items: { id: string; name: string; category: string }[]
     }
   }
   process: {
@@ -403,9 +404,18 @@ const ko: SiteContent = {
       },
     ],
     clientLogos: {
-      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
-      title: '주요 고객사 & 협력 인프라',
-      note: '대한민국을 대표하는 대기업 및 혁신 기업들과 함께 엔터프라이즈 시스템 구축 및 AI DX 프로젝트를 수행해오고 있습니다.',
+      eyebrow: 'CLIENT & PARTNER PROJECTS',
+      title: '주요 프로젝트 수행 기업',
+      note: '대한민국을 대표하는 모빌리티, IT 서비스, 면세, 리테일, 엔지니어링, 의료 및 F&B 기업들의 핵심 비즈니스 시스템을 구축하였습니다.',
+      items: [
+        { id: 'hyundai-motor', name: '현대자동차', category: '모빌리티 · 판매 플랫폼' },
+        { id: 'hyundai-autoever', name: '현대오토에버', category: 'IT 플랫폼 · 엔터프라이즈 SI' },
+        { id: 'shinsegae-df', name: '신세계면세점', category: '면세 · AI DX 시스템' },
+        { id: 'lotte-innovate', name: '롯데이노베이트', category: '리테일 · IT 서비스' },
+        { id: 'samsung-eng', name: '삼성엔지니어링', category: '엔지니어링 · 플랜트 연계' },
+        { id: 'asan-medical', name: '서울아산병원', category: '의료 · 헬스케어 플랫폼' },
+        { id: 'sungsimdang', name: '성심당', category: 'F&B · 커머스 오퍼레이션' },
+      ],
     },
   },
   process: {
@@ -744,9 +754,18 @@ const en: SiteContent = {
       },
     ],
     clientLogos: {
-      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
-      title: 'Major Clients & Enterprise Partners',
-      note: 'Trusted by leading global corporations and enterprise leaders for mission-critical IT systems and AI transformation.',
+      eyebrow: 'CLIENT & PARTNER PROJECTS',
+      title: 'Major Client Project Experience',
+      note: 'Delivered mission-critical systems and AI DX platforms for industry leaders across mobility, retail, duty-free, engineering, healthcare, and F&B.',
+      items: [
+        { id: 'hyundai-motor', name: 'Hyundai Motor', category: 'Mobility · Sales Platform' },
+        { id: 'hyundai-autoever', name: 'Hyundai AutoEver', category: 'IT Platform · Enterprise SI' },
+        { id: 'shinsegae-df', name: 'Shinsegae Duty Free', category: 'Duty Free · AI DX System' },
+        { id: 'lotte-innovate', name: 'Lotte Innovate', category: 'Retail · IT Services' },
+        { id: 'samsung-eng', name: 'Samsung Engineering', category: 'Engineering · Plant Systems' },
+        { id: 'asan-medical', name: 'Asan Medical Center', category: 'Healthcare & Medical Platform' },
+        { id: 'sungsimdang', name: 'Sungsimdang', category: 'F&B · Commerce Operations' },
+      ],
     },
   },
   process: {
@@ -976,9 +995,18 @@ const ja: SiteContent = {
       },
     ],
     clientLogos: {
-      eyebrow: 'ENTERPRISE CLIENTS & PARTNERS',
-      title: '主要クライアント＆パートナー企業',
-      note: '国内外の大手企業および革新企業とともに、エンタープライ즈システム構築およびDXプロジェクトを推進しています。',
+      eyebrow: 'CLIENT & PARTNER PROJECTS',
+      title: '主要プロジェクト遂行企業',
+      note: 'モビリティ、ITサービス、免税、リテール、エンジニアリング、医療、F&Bなど、韓国を代表する企業の基幹システム構築およびAI DXプロジェクトを遂行しました。',
+      items: [
+        { id: 'hyundai-motor', name: '現代自動車', category: 'モビリティ・販売プラットフォーム' },
+        { id: 'hyundai-autoever', name: '現代オートエバー', category: 'ITプラットフォーム・SI' },
+        { id: 'shinsegae-df', name: '新世界免税店', category: '免税・AI DXシステム' },
+        { id: 'lotte-innovate', name: 'ロッテイノベート', category: 'リテール・ITサービス' },
+        { id: 'samsung-eng', name: 'サムスンエンジニアリング', category: 'エンジニアリング・プラント' },
+        { id: 'asan-medical', name: 'ソウルアサン病院', category: '医療・ヘルスケア' },
+        { id: 'sungsimdang', name: '聖心堂 (Sungsimdang)', category: 'F&B・コマース' },
+      ],
     },
   },
   process: {
