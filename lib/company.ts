@@ -7,11 +7,11 @@ export const company = {
   nameEn: 'TOBETHEONE Co., Ltd.',
   shortName: 'TOBETHEONE',
   ceo: '조현원',
-  ceoEn: 'Cho Hyunwon',
+  ceoEn: 'HYUNWON JO',
   founded: '2023-03-01',
   foundedLabel: '2023년 3월 1일',
-  location: '대한민국 서울특별시',
-  locationEn: 'Seoul, Republic of Korea',
+  location: '대한민국 서울시 광진구 광나루로56길 85, 26층',
+  locationEn: '26F, 85, Gwangnaru-ro 56-gil, Gwangjin-gu, Seoul, Republic of Korea',
   domain: 'https://www.tobetheone.co.kr',
 
   // 확정 전 placeholder — 실제 값으로 교체하세요.
