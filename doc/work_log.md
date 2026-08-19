@@ -175,7 +175,17 @@
   * `pnpm-lock.yaml`
   * `doc/work_log.md`
 
+#### 21. Vercel 배포 ERR_PNPM_LOCKFILE_CONFIG_MISMATCH 에러 해결
+* **내용**:
+  * **에러 원인 분석**: Vercel CI 환경은 배포 시 `pnpm install --frozen-lockfile`을 엄격히 검사하는데, `package.json`에 선언된 불필요한 `"overrides": { "hono": "4.12.25" }` 설정이 `pnpm-lock.yaml`의 설정 상태와 일치하지 않아 빌드가 중단됨.
+  * **해결 조치**: 프로젝트에서 직접 사용하지 않는 불필요한 `overrides` 설정을 `package.json`에서 완전히 제거하고 `pnpm install`을 통해 `pnpm-lock.yaml`과의 완전한 동기화 완료. `next build` 프로덕션 컴파일 정상 통과 확인.
+* **관련 파일**:
+  * `package.json`
+  * `pnpm-lock.yaml`
+  * `doc/work_log.md`
+
 ---
+
 
 
 
