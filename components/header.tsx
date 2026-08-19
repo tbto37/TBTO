@@ -33,23 +33,15 @@ export function Header() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  // Solid header (dark text on light bg) once scrolled or mobile menu open.
-  // Otherwise the header floats over the navy hero and uses light text.
-  const solid = scrolled || open
+  // Black / dark theme header styling for perfect integration with black-background logo
+  const isDarkScrolled = scrolled || open
 
   return (
-    <header
-      className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-colors duration-300',
-        solid
-          ? 'border-b border-border bg-background/85 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent',
-      )}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black shadow-xl shadow-black/30 transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="group flex items-center gap-2.5 rounded-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          className="flex items-center gap-2.5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
           aria-label="TOBETHEONE — 맨 위로"
         >
           <Image
@@ -57,15 +49,9 @@ export function Header() {
             alt="TOBETHEONE 로고"
             width={32}
             height={32}
-            priority
-            className="h-8 w-8 rounded-md object-contain"
+            className="h-8 w-8 object-contain"
           />
-          <span
-            className={cn(
-              'text-sm font-bold tracking-[0.16em] transition-colors',
-              solid ? 'text-foreground' : 'text-navy-foreground',
-            )}
-          >
+          <span className="text-sm font-bold tracking-[0.16em] text-white">
             TOBETHEONE
           </span>
         </button>
@@ -76,12 +62,7 @@ export function Header() {
             <button
               key={item.id}
               onClick={() => go(item.id)}
-              className={cn(
-                'rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none',
-                solid
-                  ? 'text-muted-foreground hover:text-foreground'
-                  : 'text-navy-foreground/70 hover:text-navy-foreground',
-              )}
+              className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
             >
               {item.label}
             </button>
@@ -90,12 +71,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <div
-            className={cn(
-              'hidden items-center rounded-full border p-0.5 transition-colors sm:flex',
-              solid
-                ? 'border-border bg-card'
-                : 'border-navy-foreground/25 bg-navy-foreground/10',
-            )}
+            className="hidden items-center rounded-full border border-white/15 bg-white/5 p-0.5 transition-colors sm:flex"
             role="group"
             aria-label="언어 선택"
           >
@@ -105,14 +81,10 @@ export function Header() {
                 onClick={() => setLocale(l.code as Locale)}
                 aria-pressed={locale === l.code}
                 className={cn(
-                  'rounded-full px-2.5 py-1 text-xs font-semibold transition-colors',
+                  'rounded-full px-2.5 py-1 text-xs font-semibold transition-all',
                   locale === l.code
-                    ? solid
-                      ? 'bg-navy text-navy-foreground'
-                      : 'bg-navy-foreground text-navy'
-                    : solid
-                      ? 'text-muted-foreground hover:text-foreground'
-                      : 'text-navy-foreground/70 hover:text-navy-foreground',
+                    ? 'bg-white text-black shadow-sm'
+                    : 'text-gray-300 hover:text-white',
                 )}
               >
                 {l.label}
@@ -122,17 +94,14 @@ export function Header() {
 
           <Button
             size="lg"
-            className="hidden bg-primary text-primary-foreground hover:bg-primary/90 sm:inline-flex"
+            className="hidden bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 sm:inline-flex"
             onClick={() => go('contact')}
           >
             {t.nav.contact}
           </Button>
 
           <button
-            className={cn(
-              'flex h-9 w-9 items-center justify-center rounded-md transition-colors lg:hidden',
-              solid ? 'text-foreground' : 'text-navy-foreground',
-            )}
+            className="flex h-9 w-9 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 lg:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? '메뉴 닫기' : '메뉴 열기'}
@@ -144,18 +113,18 @@ export function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-white/10 bg-black/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4" aria-label="모바일 메뉴">
             {[...navItems, { id: 'contact', label: t.nav.contact }].map((item) => (
               <button
                 key={item.id}
                 onClick={() => go(item.id)}
-                className="rounded-md px-3 py-3 text-left text-base font-medium text-foreground transition-colors hover:bg-muted"
+                className="rounded-md px-3 py-3 text-left text-base font-medium text-gray-200 transition-colors hover:bg-white/10 hover:text-white"
               >
                 {item.label}
               </button>
             ))}
-            <div className="mt-3 flex items-center gap-2 px-3">
+            <div className="mt-3 flex items-center gap-2 border-t border-white/10 px-3 pt-3">
               {locales.map((l) => (
                 <button
                   key={l.code}
@@ -164,8 +133,8 @@ export function Header() {
                   className={cn(
                     'rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors',
                     locale === l.code
-                      ? 'border-navy bg-navy text-navy-foreground'
-                      : 'border-border text-muted-foreground',
+                      ? 'border-primary bg-primary text-white'
+                      : 'border-white/20 text-gray-300 hover:text-white',
                   )}
                 >
                   {l.label}

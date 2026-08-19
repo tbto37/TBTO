@@ -15,10 +15,10 @@ export const company = {
   domain: 'https://www.tobetheone.co.kr',
 
   // 확정 전 placeholder — 실제 값으로 교체하세요.
-  email: '[대표 이메일 입력]',
-  phone: '[대표 전화번호 입력]',
-  address: '[상세 주소 입력]',
-  bizNumber: '[사업자등록번호 입력]',
+  email: 'tobetheone@tobetheone.kr',
+  phone: '02-6958-5790',
+  address: '서울시 광진구 광나루로56길 85, 26층',
+  bizNumber: '132-88-02827',
 } as const
 
 export type Company = typeof company

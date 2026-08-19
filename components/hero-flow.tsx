@@ -63,9 +63,9 @@ export function HeroFlow() {
         {/* left nodes */}
         {left.map((n, i) => (
           <g key={`ln-${i}`}>
-            <rect x="12" y={n.y} width="136" height="44" rx="10" fill="#0d243b" stroke="#20C5E8" strokeOpacity="0.25" />
+            <rect x="12" y={n.y} width="136" height="44" rx="10" fill="#111827" stroke="#20C5E8" strokeOpacity="0.35" />
             <circle cx="30" cy={n.y + 22} r="3.5" fill="#20C5E8" />
-            <text x="46" y={n.y + 26} fill="#dbeafe" fontSize="12" fontWeight="600">
+            <text x="46" y={n.y + 26} fill="#f3f4f6" fontSize="12" fontWeight="600">
               {n.label}
             </text>
           </g>
@@ -74,9 +74,9 @@ export function HeroFlow() {
         {/* right nodes */}
         {right.map((n, i) => (
           <g key={`rn-${i}`}>
-            <rect x="392" y={n.y} width="136" height="44" rx="10" fill="#0d243b" stroke="#20C5E8" strokeOpacity="0.25" />
+            <rect x="392" y={n.y} width="136" height="44" rx="10" fill="#111827" stroke="#20C5E8" strokeOpacity="0.35" />
             <circle cx="410" cy={n.y + 22} r="3.5" fill="#2563EB" />
-            <text x="426" y={n.y + 26} fill="#dbeafe" fontSize="12" fontWeight="600">
+            <text x="426" y={n.y + 26} fill="#f3f4f6" fontSize="12" fontWeight="600">
               {n.label}
             </text>
           </g>
@@ -113,7 +113,7 @@ export function HeroFlow() {
           ))}
       </svg>
 
-      <p className="mt-4 text-center text-xs text-navy-foreground/60">{f.caption}</p>
+      <p className="mt-4 text-center text-xs text-gray-400">{f.caption}</p>
     </div>
   )
 }

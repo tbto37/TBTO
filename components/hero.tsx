@@ -23,7 +23,7 @@ export function Hero() {
         }
 
   return (
-    <section className="relative overflow-hidden bg-navy text-navy-foreground">
+    <section className="relative overflow-hidden bg-black text-white">
       {/* subtle technical grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.5]"
@@ -52,7 +52,7 @@ export function Hero() {
 
           <motion.h1
             {...fade(0.08)}
-            className="mt-6 text-3xl leading-[1.15] font-bold tracking-tight text-balance sm:text-4xl md:text-5xl"
+            className="mt-6 text-3xl leading-[1.15] font-bold tracking-tight text-balance text-white sm:text-4xl md:text-5xl"
           >
             {t.hero.headline[0]}
             <br />
@@ -63,7 +63,7 @@ export function Hero() {
 
           <motion.p
             {...fade(0.16)}
-            className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/70 md:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-gray-300 md:text-lg"
           >
             {t.hero.desc}
           </motion.p>
@@ -71,7 +71,7 @@ export function Hero() {
           <motion.div {...fade(0.24)} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary text-primary-foreground shadow-sm hover:bg-primary/90"
               onClick={() => go('contact')}
             >
               {t.cta.consult}
@@ -80,7 +80,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-navy-foreground/25 bg-transparent text-navy-foreground hover:bg-navy-foreground/10 hover:text-navy-foreground"
+              className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white"
               onClick={() => go('services')}
             >
               {t.cta.viewWork}
@@ -91,7 +91,7 @@ export function Hero() {
             {t.hero.badges.map((b) => (
               <li
                 key={b}
-                className="rounded-md border border-navy-foreground/12 bg-navy-foreground/5 px-3 py-1.5 text-xs font-medium text-navy-foreground/75"
+                className="rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-gray-300"
               >
                 {b}
               </li>
@@ -107,7 +107,7 @@ export function Hero() {
                 animate: { opacity: 1, scale: 1 },
                 transition: { duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] as const },
               })}
-          className="rounded-2xl border border-navy-foreground/10 bg-navy-foreground/[0.03] p-5 md:p-7"
+          className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:p-7 shadow-2xl shadow-black/50"
         >
           <HeroFlow />
         </motion.div>

@@ -21,7 +21,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-white/10 bg-black text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.1fr_1.4fr]">
           <div>
@@ -31,38 +31,38 @@ export function Footer() {
                 alt="TOBETHEONE 로고"
                 width={32}
                 height={32}
-                className="h-8 w-8 rounded-md object-contain"
+                className="h-8 w-8 object-contain"
               />
-              <span className="text-sm font-bold tracking-[0.16em] text-foreground">
+              <span className="text-sm font-bold tracking-[0.16em] text-white">
                 TOBETHEONE
               </span>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-400">
               {f.tagline}
             </p>
-            <p className="mt-4 text-sm font-semibold text-foreground">{companyName}</p>
+            <p className="mt-4 text-sm font-semibold text-white">{companyName}</p>
           </div>
 
           <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {rows.map((row) => (
               <div key={row.label} className="flex flex-col gap-0.5">
-                <dt className="text-xs font-medium tracking-wide text-muted-foreground">
+                <dt className="text-xs font-medium tracking-wide text-gray-400">
                   {row.label}
                 </dt>
-                <dd className="text-sm text-foreground">{row.value}</dd>
+                <dd className="text-sm text-gray-200">{row.value}</dd>
               </div>
             ))}
           </dl>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <a
             href="#"
-            className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-xs font-medium text-gray-400 transition-colors hover:text-white"
           >
             {f.privacy}
           </a>
-          <p className="text-xs text-muted-foreground">{f.rights}</p>
+          <p className="text-xs text-gray-400">{f.rights}</p>
         </div>
       </div>
     </footer>
